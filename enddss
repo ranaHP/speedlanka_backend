@@ -1,0 +1,97 @@
+{
+  users{
+    _id
+    name
+    email
+    password
+    address
+    contact
+    status
+    roll
+  }
+}
+
+
+mutation {
+  getUser(variables: { contact: "0412283111", password: "asd" }) {
+    _id
+    name
+    email
+    password
+    address
+    contact
+    status
+    roll
+  }
+}
+
+mutation {
+  createUser(
+    variables: {
+      _id: "041228222"
+      name: "Hansana"
+      contact: "0412283222"
+      password: "asd"
+      email: "hansana987@gmail.com"
+      address: "no 54 , akiress"
+    }
+  ) {
+    _id
+    name
+    email
+    password
+    address
+    contact
+    status
+    roll
+  }
+}
+
+
+mutation {
+  updateUser(
+    _id: "041228222",
+    fields: {
+      name: "Hansana Reshi"
+      contact: "0412283222"
+      password: "asdasd"
+      email: "hansana987@gmail.com"
+      address: "no 54 , akuressa"
+    }
+  ) {
+     isUpdated
+  }
+}
+
+mutation {
+  verifyUser(
+    _id: "041228111"
+  ) {
+     isUpdated
+  }
+}
+
+mutation {
+  updateUser(
+    _id: "041228222",
+    fields: {
+      status: "asd"
+    }
+  ) {
+     isUpdated
+  }
+}
+# mutation {
+#   updateUser(
+#     _id: "041228222",
+#     fields: {
+#       password: "asd"
+#     }
+#   ) {
+#      isUpdated
+#   }
+# }
+
+
+
+
