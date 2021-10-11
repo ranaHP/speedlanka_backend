@@ -4,9 +4,10 @@ import { startServer } from "./app";
 
 async function main() {
   connect();
-  const app = await startServer(); 
-  app.listen(4000);
-  console.log("Server on port 4000");
+  const app = await startServer();
+  const port = 8080;
+  app.listen(port);
+  console.log("Server on port " + port);
 }
 
 main();
